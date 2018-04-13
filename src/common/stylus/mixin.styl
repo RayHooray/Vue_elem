@@ -1,0 +1,34 @@
+//1px像素下边框
+  bottom_border_1px($color)
+    position relative
+    &::before
+      content ''
+      position absolute
+      left 0
+      bottom 0
+      right 0
+      height 1px
+      background-color $color
+      transform scaleY(.5)
+      z-index 100
+
+//1px像素上边框
+  top_border_1xp($color)
+    position relative
+    &::before
+      content ''
+      position absolute
+      left 0
+      right 0
+      top 0
+      z-index 100
+      height 1px
+      background-color $color
+      transition scaleY(.5)
+
+
+//不换行并且显示省略号
+  omit()
+    white-space nowrap
+    text-overflow ellipsis
+    overflow hidden
